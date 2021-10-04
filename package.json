@@ -1,0 +1,49 @@
+{
+  "name": "ps-backend",
+  "version": "0.1.0",
+  "description": "Tours Backend",
+  "scripts": {
+    "format": "prettier --config ./.prettierrc --write \"**/*.ts\"",
+    "start": "node dist/server.js",
+    "build": "tsc --project tsconfig.build.json",
+    "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "watch-debug": "npm run eslint && NODE_ENV=development PORT=4000 ts-node-dev --respawn ./src/server.ts",
+    "test": "jest --coverage --runInBand --no-cache",
+    "typeorm": "ts-node-dev ./node_modules/.bin/typeorm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tour-service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jll-labs/ps-backend/issues"
+  },
+  "homepage": "https://github.com/",
+  "devDependencies": {
+    "dotenv": "8.2.0",
+    "prettier": "2.3.2"
+  },
+  "dependencies": {
+    "axios": "0.21.3",
+    "cache-manager": "3.4.3",
+    "class-transformer": "0.4.0",
+    "class-validator": "0.13.1",
+    "class-validator-jsonschema": "3.0.0",
+    "emittery": "0.7.2",
+    "express": "4.17.1",
+    "fs-extra": "9.1.0",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.20",
+    "luxon": "1.25.0",
+    "pg": "8.4.1",
+    "reflect-metadata": "0.1.13",
+    "routing-controllers": "0.9.0",
+    "routing-controllers-openapi": "3.0.0",
+    "swagger-ui-express": "4.1.6",
+    "typedi": "0.10.0",
+    "typeorm": "0.2.38",
+    "uuid": "8.3.1"
+  }
+}
